@@ -20,28 +20,28 @@ Once the project moves into development, the press release can be used as a touc
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
   
-  DinoFarm
+  DogList
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
 
-  Add your favorite dinos to your farm and check them out making noise
+  Search by breed and return a random dog image
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
-  This simple app allows the user to submit a dinosaur of their choice. Depending on whether the dino is a herbivor or a carnivor it will be captivated a different cage(meaning the dinosaur gets displayed in either of the two distinct parts of the UI). By clicking on each dinosaur, the noise that the dinosaur makes will be added as text in the list below the respective cage of the dinosaur. 
+  This simple app allows the user to search for a dog by breed and receive a photo of a random dog of that breed. By clicking next the user can see more dogs of that breed.
 
 ## Problem ##
   > Describe the problem your product solves.
 
-  The app can make it visually clear whether the dinosaur is an herbivor or a carnivor
+  The app can make it visually clear which types of dogs are under a certain breed
 
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
 
-   Each dinosaur in the DB has property telling whether the dinsosaur is a herbivor or carnivor
+   Each requested breed will store dog data of that breed on the db and one of the dogs will become visible at the UI
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
@@ -51,7 +51,7 @@ Once the project moves into development, the press release can be used as a touc
 ## How to Get Started ##
   > Describe how easy it is to get started.
 
-  "Enter a dino in the field"
+  "Enter a breed"
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.

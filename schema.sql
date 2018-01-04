@@ -1,18 +1,14 @@
-DROP DATABASE IF EXISTS dinofarm;
+DROP DATABASE IF EXISTS dogdb;
 
-CREATE DATABASE dinofarm;
+CREATE DATABASE dogdb;
 
-USE dinofarm;
+USE dogdb;
 
-CREATE TABLE dinosaurs (
+CREATE TABLE dogs (
   id int NOT NULL AUTO_INCREMENT,
-  name varchar(100) NOT NULL,
-  type varchar(100) NOT NULL,
+  photo varchar(500),
   PRIMARY KEY(ID)
 );
 
 
-INSERT INTO dinosaurs (name,type) VALUES ('Trex', 'carnivor');
-INSERT INTO dinosaurs (name,type) VALUES ('Iguanodon', 'herbivor');
-INSERT INTO dinosaurs (name,type) VALUES ('Blabladon', 'carnivor');
-INSERT INTO dinosaurs (name,type) VALUES ('Megalosaurus', 'herbivor');
+INSERT INTO dogs (photo) VALUES ("https:\/\/dog.ceo\/api\/img\/kelpie\/n02105412_4038.jpg");
