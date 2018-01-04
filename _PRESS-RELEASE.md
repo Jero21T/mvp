@@ -16,29 +16,46 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
  
+ 
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  
+  DinoFarm
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
 
+  Add your favorite dinos to your farm and check them out making noise
+
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+
+  This simple app allows the user to submit a dinosaur of their choice. Depending on whether the dino is a herbivor or a carnivor it will be captivated a different cage(meaning the dinosaur gets displayed in either of the two distinct parts of the UI). By clicking on each dinosaur, the noise that the dinosaur makes will be added as text in the list below the respective cage of the dinosaur. 
 
 ## Problem ##
   > Describe the problem your product solves.
 
+  The app can make it visually clear whether the dinosaur is an herbivor or a carnivor
+
+
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+
+   Each dinosaur in the DB has property telling whether the dinsosaur is a herbivor or carnivor
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
 
+  "Fun app, even in it simplest appaerance"
+
 ## How to Get Started ##
   > Describe how easy it is to get started.
 
+  "Enter a dino in the field"
+
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
