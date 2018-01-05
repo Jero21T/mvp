@@ -1,11 +1,18 @@
 import React from 'react';
 
 
-const DogPhoto = () => {
+const DogPhoto = (props) => {
 	return (
-<div>A Dog photo</div>
-	)
+<div>
+<ul>
+{props.breeds.map((breed)=> 
+<li>{breed}</li>
+)}
+</ul>
+</div>
+)
 }
+
 
 
 

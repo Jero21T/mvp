@@ -9,7 +9,7 @@ export default class App extends React.Component {
   	super(props);
 
   	this.state = {
-  		//to be done
+  		breeds: []
   	}
 
   	this.storeAllBreedsInDatabase = this.storeAllBreedsInDatabase.bind(this)
@@ -22,6 +22,7 @@ export default class App extends React.Component {
     	type: 'GET',
     	success: (data) => {
     		console.log('All breeds are successfully stored on the database')
+    		this.setState({breeds:data})
     	},
     	dataType: 'json',
     	error: (err) => {
@@ -39,7 +40,7 @@ export default class App extends React.Component {
 	  <div>
 	  <h1>Welcome to the Dogshow</h1>
 	  <DogInput />
-	  <DogPhoto />
+	  <DogPhoto breeds={this.state.breeds} />
 	  </div>
 	)
   }

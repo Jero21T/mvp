@@ -19,17 +19,41 @@ app.get('/allbreeds', (req,res) =>{
       var toBeReturned = (data.message);
       res.json(toBeReturned)
 	  data.message.forEach((breed)=>{
+	  	//////////////////////////////////////////////////////
+
+	  	getBreedList.getRandomPhotoOfBreed(breed, (err,randomPhoto)=>{
+	  		if (err){
+	  			throw err;
+	  		}else{
+              dbhandler.storeAllUrls(breed, randomPhoto.message, (err,data)=>{
+	  		if (err){
+	  			throw err;
+	  		}else{
+	  		  //do nothing
+	  		  console.log('Succesfully stored all urls')
+	  		}
+	  	  })
+
+	  		}
+	  	})
+
+	  	///////////////////////////////////////////////////
 	    dbhandler.storeAllBreeds(breed,(err,data)=>{
           if (err){
             throw err;
           }else{
             //do nothing
+            console.log('Succesfully stored all breeds')
           }
         })
 	  });
     }
   });
 });
+
+
+
+
 
 
 

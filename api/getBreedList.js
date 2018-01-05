@@ -14,4 +14,21 @@ const getAllBreeds = (cb) => {
 }
 
 
+const getRandomPhotoOfBreed = (breed, cb) => {
+	
+	function callback(err,response, body){
+		if (!err && response.statusCode ==200){
+          var data = JSON.parse(body);
+          console.log(data)
+          cb(null, data)
+		}
+	}
+
+	request('https://dog.ceo/api/breed/'+breed+'/images/random',callback)
+
+}
+
+
+
 module.exports.getAllBreeds = getAllBreeds
+module.exports.getRandomPhotoOfBreed = getRandomPhotoOfBreed

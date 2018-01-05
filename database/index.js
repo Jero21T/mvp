@@ -17,7 +17,7 @@ connection.connect();
 
 const storeAllBreeds = (breed, cb) => {
 
-  const query = 'INSERT INTO dogs (name) VALUES (?)';
+  const query = 'INSERT INTO breeds (name) VALUES (?)';
 
   connection.query(query,[breed], (err,results) =>{
   	if (err){
@@ -28,5 +28,20 @@ const storeAllBreeds = (breed, cb) => {
   });
 }
 
+const storeAllUrls = (breed,url,cb) => {
+console.log(breed)
+const query2 = 'INSERT INTO breeds (url) VALUES (?)';
+
+connection.query(query2,[url], (err, results) =>{
+  if (err){
+    cb(err);
+  }else{
+    cb(null,results);
+  }
+})
+
+}
+
 
 module.exports.storeAllBreeds = storeAllBreeds;
+module.exports.storeAllUrls =storeAllUrls;
