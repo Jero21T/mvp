@@ -2,6 +2,7 @@ import React from 'react';
 import BreedInput from './BreedInput.jsx'
 import BreedList from './BreedList.jsx'
 import $ from 'jquery'
+import DogPhoto from './DogPhoto.jsx'
 
 
 export default class App extends React.Component {
@@ -40,6 +41,7 @@ export default class App extends React.Component {
 	  <div>
 	  <h1>Welcome to the Dogshow</h1>
 	  <BreedInput />
+    <DogPhoto  />
 	  <BreedList breeds={this.state.breeds} />
 	  </div>
 	)
