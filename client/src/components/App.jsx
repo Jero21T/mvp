@@ -1,6 +1,6 @@
 import React from 'react';
-import DogInput from './DogInput.jsx'
-import DogPhoto from './DogPhoto.jsx'
+import BreedInput from './BreedInput.jsx'
+import BreedList from './BreedList.jsx'
 import $ from 'jquery'
 
 
@@ -39,8 +39,8 @@ export default class App extends React.Component {
     return (
 	  <div>
 	  <h1>Welcome to the Dogshow</h1>
-	  <DogInput />
-	  <DogPhoto breeds={this.state.breeds} />
+	  <BreedInput />
+	  <BreedList breeds={this.state.breeds} />
 	  </div>
 	)
   }

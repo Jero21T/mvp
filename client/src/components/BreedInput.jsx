@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const DogInput = () => {
+const BreedInput = () => {
 	return (
 <div>
 <input placeholder="Enter a breed"/>
@@ -12,4 +12,4 @@ const DogInput = () => {
 
 
 
-export default DogInput
+export default BreedInput

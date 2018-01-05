@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const DogPhoto = (props) => {
+const BreedList = (props) => {
 	return (
 <div>
 <ul>
@@ -16,4 +16,4 @@ const DogPhoto = (props) => {
 
 
 
-export default DogPhoto
+export default BreedList
