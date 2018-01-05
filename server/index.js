@@ -11,17 +11,25 @@ app.use(express.static(__dirname+'/../client/dist'))
 app.get('/allbreeds', (req,res) =>{
 
 //invoke dbhandler
-getBreedList.getAllBreeds((err,data) => {
-	if (err){
-		throw err;
-	}else{
-		console.log(data)
-	}
-})
-
-
-
+  getBreedList.getAllBreeds((err,data) => {
+    if (err){
+      throw err;
+    }else{
+	  data.message.forEach((breed)=>{
+	    dbhandler.storeAllBreeds(breed,(err,data)=>{
+          if (err){
+            throw err;
+          }else{
+            console.log(data)
+          }
+        })
+	  });
+    }
+  });
 });
+
+
+
 
 
 

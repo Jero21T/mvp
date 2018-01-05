@@ -6,9 +6,9 @@ USE dogdb;
 
 CREATE TABLE dogs (
   id int NOT NULL AUTO_INCREMENT,
-  photo varchar(500),
+  name varchar(100),
   PRIMARY KEY(ID)
 );
 
 
-INSERT INTO dogs (photo) VALUES ("https:\/\/dog.ceo\/api\/img\/kelpie\/n02105412_4038.jpg");
+-- INSERT INTO dogs (name,photo) VALUES ('ugly',"https:\/\/dog.ceo\/api\/img\/kelpie\/n02105412_4038.jpg");
