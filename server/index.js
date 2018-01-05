@@ -58,11 +58,13 @@ app.get('/allurls',(req,res)=>{
   		res.status(500)
   		res.send(err)
   	}else{
-  		console.log(data)
-  		res.send(JSON.stringify(data))
+  		res.json(data)
   	}
   })
 })
+
+
+
 
 
 

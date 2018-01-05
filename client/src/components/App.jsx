@@ -23,7 +23,13 @@ export default class App extends React.Component {
 
    
   handleBreedClick(event){
-     console.log(event.target.innerText)
+   console.log(this.state.urls)
+
+   this.state.urls.forEach((url)=>{
+    if (url.url.indexOf(event.target)){
+      console.log(url.url)
+    }
+   })
   }
 
 
@@ -32,7 +38,6 @@ export default class App extends React.Component {
       url:"http://localhost:3000/allurls",
       type: 'GET',
       success: (data) => {
-        console.log(data)
         this.setState({urls:data})
       },
       dataType: 'json',
@@ -61,6 +66,12 @@ export default class App extends React.Component {
    componentWillMount (){
    	this.storeAllBreedsInDatabase();
    }
+
+   componentDidMount(){
+    this.storeAllUrlsInDatabase();
+   }
+
+
 
   render(){
     return (
