@@ -12,15 +12,18 @@ app.get('/allbreeds', (req,res) =>{
 
 //invoke dbhandler
   getBreedList.getAllBreeds((err,data) => {
+
     if (err){
       throw err;
     }else{
+      var toBeReturned = (data.message);
+      res.json(toBeReturned)
 	  data.message.forEach((breed)=>{
 	    dbhandler.storeAllBreeds(breed,(err,data)=>{
           if (err){
             throw err;
           }else{
-            console.log(data)
+            //do nothing
           }
         })
 	  });
