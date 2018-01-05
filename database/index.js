@@ -29,7 +29,7 @@ const storeAllBreeds = (breed, cb) => {
 }
 
 const storeAllUrls = (breed,url,cb) => {
-console.log(breed)
+// console.log(breed)
 const query2 = 'INSERT INTO urls (url) VALUES (?)';
 
 connection.query(query2,[url], (err, results) =>{
@@ -39,9 +39,28 @@ connection.query(query2,[url], (err, results) =>{
     cb(null,results);
   }
 })
-
 }
+
+
+const retrieveAllUrls  = (cb) => {
+const query = 'SELECT * FROM urls'
+
+connection.query(query, (err, results)=> {
+    if (err) {
+      cb(err);
+    }else{
+      cb(null, results)
+    }
+  });
+}
+
+
+
+
+
+
 
 
 module.exports.storeAllBreeds = storeAllBreeds;
 module.exports.storeAllUrls =storeAllUrls;
+module.exports.retrieveAllUrls = retrieveAllUrls;

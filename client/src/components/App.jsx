@@ -10,10 +10,36 @@ export default class App extends React.Component {
   	super(props);
 
   	this.state = {
-  		breeds: []
+  		breeds: [],
+      urls: []
   	}
 
   	this.storeAllBreedsInDatabase = this.storeAllBreedsInDatabase.bind(this)
+    this.storeAllUrlsInDatabase = this.storeAllUrlsInDatabase.bind(this)
+  }
+
+
+
+
+   
+  handleBreedClick(event){
+     console.log(event.target.innerText)
+  }
+
+
+  storeAllUrlsInDatabase(){
+    $.ajax({
+      url:"http://localhost:3000/allurls",
+      type: 'GET',
+      success: (data) => {
+        console.log(data)
+        this.setState({urls:data})
+      },
+      dataType: 'json',
+      error: (err) => {
+          console.error(err)
+      }
+    })
   }
 
   storeAllBreedsInDatabase() {
@@ -22,7 +48,7 @@ export default class App extends React.Component {
     	url:"http://localhost:3000/allbreeds",
     	type: 'GET',
     	success: (data) => {
-    		console.log('All breeds are successfully stored on the database')
+    		// console.log('All breeds are successfully stored on the database')
     		this.setState({breeds:data})
     	},
     	dataType: 'json',
@@ -42,7 +68,7 @@ export default class App extends React.Component {
 	  <h1>Welcome to the Dogshow</h1>
 	  <BreedInput />
     <DogPhoto  />
-	  <BreedList breeds={this.state.breeds} />
+	  <BreedList handleBreedClick={this.handleBreedClick.bind(this)} breeds={this.state.breeds} />
 	  </div>
 	)
   }

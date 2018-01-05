@@ -30,7 +30,7 @@ app.get('/allbreeds', (req,res) =>{
 	  			throw err;
 	  		}else{
 	  		  //do nothing
-	  		  console.log('Succesfully stored all urls')
+	  		  // console.log('Succesfully stored all urls')
 	  		}
 	  	  })
 
@@ -43,7 +43,7 @@ app.get('/allbreeds', (req,res) =>{
             throw err;
           }else{
             //do nothing
-            console.log('Succesfully stored all breeds')
+            // console.log('Succesfully stored all breeds')
           }
         })
 	  });
@@ -51,6 +51,18 @@ app.get('/allbreeds', (req,res) =>{
   });
 });
 
+
+app.get('/allurls',(req,res)=>{
+  dbhandler.retrieveAllUrls((err,data)=>{
+  	if (err){
+  		res.status(500)
+  		res.send(err)
+  	}else{
+  		console.log(data)
+  		res.send(JSON.stringify(data))
+  	}
+  })
+})
 
 
 

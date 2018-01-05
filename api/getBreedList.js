@@ -5,7 +5,7 @@ const getAllBreeds = (cb) => {
 	function callback(err,response, body){
 		if (!err && response.statusCode ==200){
           var data = JSON.parse(body);
-          console.log(data)
+          // console.log(data)
           cb(null, data)
 		}
 	}
@@ -19,7 +19,7 @@ const getRandomPhotoOfBreed = (breed, cb) => {
 	function callback(err,response, body){
 		if (!err && response.statusCode ==200){
           var data = JSON.parse(body);
-          console.log(data)
+          // console.log(data)
           cb(null, data)
 		}
 	}
@@ -27,6 +27,8 @@ const getRandomPhotoOfBreed = (breed, cb) => {
 	request('https://dog.ceo/api/breed/'+breed+'/images/random',callback)
 
 }
+
+
 
 
 

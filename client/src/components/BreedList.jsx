@@ -1,4 +1,5 @@
 import React from 'react';
+import BreedListEntry from './BreedListEntry.jsx'
 
 
 
@@ -7,7 +8,7 @@ const BreedList = (props) => {
 <div>
 <ul>
 {props.breeds.map((breed)=> 
-<li>{breed}</li>
+<BreedListEntry breed={breed} handleBreedClick={props.handleBreedClick} />
 )}
 </ul>
 </div>
