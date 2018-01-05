@@ -30,7 +30,7 @@ const storeAllBreeds = (breed, cb) => {
 
 const storeAllUrls = (breed,url,cb) => {
 console.log(breed)
-const query2 = 'INSERT INTO breeds (url) VALUES (?)';
+const query2 = 'INSERT INTO urls (url) VALUES (?)';
 
 connection.query(query2,[url], (err, results) =>{
   if (err){
