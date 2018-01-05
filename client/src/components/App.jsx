@@ -23,13 +23,10 @@ export default class App extends React.Component {
 
    
   handleBreedClick(event){
-   console.log(this.state.urls)
-
    this.state.urls.forEach((url)=>{
-    if (url.url.indexOf(event.target)){
-      console.log(url.url)
-    }
-   })
+      console.log(url)
+      }
+   )
   }
 
 

@@ -17,7 +17,7 @@ connection.connect();
 
 const storeAllBreeds = (breed, cb) => {
 
-  const query = 'INSERT INTO breeds (name) VALUES (?)';
+  const query = 'INSERT IGNORE INTO breeds (name) VALUES (?)';
 
   connection.query(query,[breed], (err,results) =>{
   	if (err){
@@ -30,7 +30,7 @@ const storeAllBreeds = (breed, cb) => {
 
 const storeAllUrls = (breed,url,cb) => {
 // console.log(breed)
-const query2 = 'INSERT INTO urls (url) VALUES (?)';
+const query2 = 'INSERT IGNORE INTO urls (url) VALUES (?)';
 
 connection.query(query2,[url], (err, results) =>{
   if (err){

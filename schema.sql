@@ -7,16 +7,23 @@ USE dogdb;
 CREATE TABLE breeds (
   id int NOT NULL AUTO_INCREMENT,
   name varchar(100),
-  PRIMARY KEY(ID)
+  PRIMARY KEY(id),
+  UNIQUE(name)
 );
+
+
 
 CREATE TABLE urls (
   id int NOT NULL AUTO_INCREMENT,
   url varchar(510),
-  PRIMARY KEY(ID)
+  breed_id int, 
+  PRIMARY KEY(id),
+  UNIQUE(url)
 )
 
-
+-- ALTER TABLE urls ADD UNIQUE (
+-- url 
+-- );
 
 
 
